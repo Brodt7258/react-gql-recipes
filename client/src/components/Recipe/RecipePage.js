@@ -12,7 +12,6 @@ const RecipePage = ({ match }) => {
     {({ data, loading, error }) => {
       if (loading) return <div>Loading</div>
       if (error) return <div>Error</div>
-      console.log(data);
       return (
         <div className="App">
           <h2>{data.getRecipe.name}</h2>
@@ -21,7 +20,7 @@ const RecipePage = ({ match }) => {
           <p>Instruction: {data.getRecipe.instructions}</p>
           <p>Likes: {data.getRecipe.likes}</p>
           <p>Created By: {data.getRecipe.username}</p>
-          <LikeRecipe />
+          <LikeRecipe _id={_id} />
         </div>
       )
     }}

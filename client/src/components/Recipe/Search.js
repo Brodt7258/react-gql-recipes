@@ -26,7 +26,7 @@ class Search extends React.Component {
                 placeholder="Search for Recipes"
                 onChange={async event => {
                   event.persist();
-                  console.log(event.target.value);
+                  // console.log(event.target.value);
                   const { data } = await client.query({
                     query: SEARCH_RECIPES,
                     variables: { searchTerm: event.target.value }

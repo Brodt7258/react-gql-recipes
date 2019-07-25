@@ -7,9 +7,7 @@ import { GET_USER_RECIPES, DELETE_USER_RECIPE, GET_ALL_RECIPES, GET_CURRENT_USER
 const handleDelete = deleteUserRecipe => {
   const confirmDelete = window.confirm('Are you sure you want to delte this recipe?');
   if (confirmDelete) {
-    deleteUserRecipe().then(({ data }) => {
-      console.log(data);
-    });
+    deleteUserRecipe();
   }
 };
 
@@ -18,7 +16,6 @@ const UserRecipes = ({ username }) => (
     {({ data, loading, error }) => {
       if (loading) return <div>Loading</div>
       if (error) return <div>Error</div>
-      console.log(data);
       return (
         <ul>
           <h3>Your Recipes</h3>

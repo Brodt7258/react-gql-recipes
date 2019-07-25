@@ -37,7 +37,7 @@ class AddRecipe extends React.Component {
   handleSubmit = (e, addRecipe) => {
     e.preventDefault();
     addRecipe().then(({ data }) => {
-      console.log(data);
+      // console.log(data);
       this.clearState();
       this.props.history.push('/');
     });
@@ -51,8 +51,8 @@ class AddRecipe extends React.Component {
 
   updateCache = (cache, { data: { addRecipe }}) => {
     const { getAllRecipes } = cache.readQuery({ query: GET_ALL_RECIPES });
-    console.log(getAllRecipes);
-    console.log(addRecipe);
+    // console.log(getAllRecipes);
+    // console.log(addRecipe);
     cache.writeQuery({
       query: GET_ALL_RECIPES,
       data: {
