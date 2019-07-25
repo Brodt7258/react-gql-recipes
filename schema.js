@@ -36,6 +36,7 @@ exports.typeDefs = `
   type Mutation {
     addRecipe(name: String!, imageUrl: String!, description: String!, category: String!, instructions: String!, username: String): Recipe
     deleteUserRecipe(_id: ID): Recipe
+    updateUserRecipe(_id: ID, name: String!, imageUrl: String!, description: String!, category: String!): Recipe
     likeRecipe(_id: ID!, username: String!): Recipe
     unLikeRecipe(_id: ID!, username: String!): Recipe
 
